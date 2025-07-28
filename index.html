@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneClick AI - Transform Your Workflow with AI</title>
+    <meta name="description" content="Discover the best AI tools for productivity, automation, and workflow optimization. Reviews, guides, and expert recommendations.">
+    <meta name="keywords" content="AI tools, productivity, automation, workflow, artificial intelligence, business tools">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+      
+      // Track affiliate clicks
+      function trackAffiliateClick(toolName, program, url) {
+        gtag('event', 'affiliate_click', {
+          'tool_name': toolName,
+          'affiliate_program': program,
+          'link_url': url,
+          'event_category': 'Affiliate Marketing',
+          'event_label': toolName,
+          'value': 1
+        });
+      }
+      
+      // Track email signups
+      function trackEmailSignup(source) {
+        gtag('event', 'email_signup', {
+          'signup_source': source,
+          'event_category': 'Lead Generation',
+          'event_label': source,
+          'value': 10
+        });
+      }
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4a5568;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+        
+        .tools-section {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2d3748;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .tool-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .tool-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+        }
+        
+        .rating {
+            color: #f6ad55;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .tool-card p {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #38a169;
+            margin-bottom: 1rem;
+        }
+        
+        .affiliate-link {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .affiliate-link:hover {
+            background: #5a67d8;
+            transform: translateY(-1px);
+        }
+        
+        .newsletter {
+            background: linear-gradient(135deg, #4c51bf 0%, #667eea 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 2rem auto 0;
+            gap: 1rem;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+        }
+        
+        .newsletter-button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .newsletter-button:hover {
+            background: #ff5252;
+            transform: translateY(-1px);
+        }
+        
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            .tools-grid { grid-template-columns: 1fr; }
+            .newsletter-form { flex-direction: column; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">OneClick AI</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tools">AI Tools</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Transform Your Workflow with AI</h1>
+            <p>Discover the most powerful AI tools to boost your productivity, automate tasks, and achieve more in less time.</p>
+            <a href="#tools" class="cta-button">Explore AI Tools</a>
+        </div>
+    </section>
+
+    <section class="tools-section" id="tools">
+        <div class="container">
+            <h2 class="section-title">Top AI Productivity Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>ChatGPT Plus</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.8/5)</div>
+                    <p>The most advanced AI assistant for writing, coding, analysis, and creative tasks. Get priority access and faster responses.</p>
+                    <div class="price">$20/month</div>
+                    <a href="#" class="affiliate-link" onclick="trackAffiliateClick('ChatGPT Plus', 'OpenAI', 'https://openai.com/chatgpt/plus')">Try ChatGPT Plus</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h3>Claude Pro</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.9/5)</div>
+                    <p>Advanced AI assistant for complex reasoning, analysis, and creative tasks. Excellent for research and writing.</p>
+                    <div class="price">$20/month</div>
+                    <a href="#" class="affiliate-link" onclick="trackAffiliateClick('Claude Pro', 'Anthropic', 'https://claude.ai/pro?ref=aiprodhub')">Try Claude Pro</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h3>Zapier AI</h3>
+                    <div class="rating">⭐⭐⭐⭐☆ (4.5/5)</div>
+                    <p>Automate workflows with AI-powered integrations. Connect apps and services without coding.</p>
+                    <div class="price">From $19.99/month</div>
+                    <a href="#" class="affiliate-link" onclick="trackAffiliateClick('Zapier AI', 'Zapier', 'https://zapier.com/ai')">Start Automating</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h3>Grammarly Business</h3>
+                    <div class="rating">⭐⭐⭐⭐☆ (4.4/5)</div>
+                    <p>AI-powered writing assistant that improves clarity, tone, and correctness across all your communications.</p>
+                    <div class="price">$15/month</div>
+                    <a href="#" class="affiliate-link" onclick="trackAffiliateClick('Grammarly Business', 'Grammarly', 'https://grammarly.com/business')">Improve Writing</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h3>GitHub Copilot</h3>
+                    <div class="rating">⭐⭐⭐⭐⭐ (4.6/5)</div>
+                    <p>AI pair programmer that helps you write code faster. Supports dozens of programming languages.</p>
+                    <div class="price">$10/month</div>
+                    <a href="#" class="affiliate-link" onclick="trackAffiliateClick('GitHub Copilot', 'GitHub', 'https://github.com/copilot')">Code with AI</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h3>Notion AI</h3>
+                    <div class="rating">⭐⭐⭐⭐☆ (4.3/5)</div>
+                    <p>Transform your workspace with AI-powered writing, brainstorming, and data analysis directly in Notion.</p>
+                    <div class="price">$8/month</div>
+                    <a href="#" class="affiliate-link" onclick="trackAffiliateClick('Notion AI', 'Notion', 'https://notion.so/product/ai')">Enhance Productivity</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Stay Ahead of the AI Revolution</h2>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Get weekly insights on the latest AI productivity tools, exclusive reviews, and automation strategies.</p>
+            
+            <form class="newsletter-form" onsubmit="handleNewsletterSignup(event)">
+                <input type="email" class="newsletter-input" placeholder="Enter your email address" required id="newsletter-email">
+                <button type="submit" class="newsletter-button">Join 10,000+ Subscribers</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 OneClick AI. All rights reserved. | <a href="#" style="color: #a0aec0;">Privacy Policy</a> | <a href="#" style="color: #a0aec0;">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Newsletter signup handler
+        function handleNewsletterSignup(event) {
+            event.preventDefault();
+            const email = document.getElementById('newsletter-email').value;
+            
+            // Track the signup
+            trackEmailSignup('newsletter');
+            
+            // Simple validation
+            if (email && email.includes('@')) {
+                alert('Thank you for subscribing! Check your email for a confirmation.');
+                document.getElementById('newsletter-email').value = '';
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        }
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
